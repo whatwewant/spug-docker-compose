@@ -4,10 +4,13 @@
 ![](https://img.shields.io/badge/docker%20build-automated-066da5)
 
 ### Getting Started
-* Step 1
-  * Copy `.env.example` to `.env`, then update environments
-* Step 2
-  * Run `docker-compose up`
+* Solution 1: Automatically Startup
+  * Run `./start.sh`
+* Solution 2: Manual Startup (RECOMMEND)
+  * Step 1
+    * Copy `.env.example` to `.env`, then update environments
+  * Step 2
+    * Run `docker-compose up`
 
 ### Version Histories
 * v2.3.16
