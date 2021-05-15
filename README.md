@@ -1,6 +1,7 @@
 # [Spug Docker Compose](https://github.com/whatwewant/spug-docker-compose)
 
 ![https://hub.docker.com/repository/docker/whatwewant/spug](https://img.shields.io/docker/v/whatwewant/spug)
+![](https://img.shields.io/badge/docker%20build-automated-066da5)
 
 ### Getting Started
 * Step 1
