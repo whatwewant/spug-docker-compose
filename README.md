@@ -6,6 +6,9 @@
 * Step 2
   * Run `docker-compose up`
 
+# Version Histories（According to spug）
+* v2.3.16
+
 # FAQ
 * How to build fast
   * Use Docker Image instead of building in `docker-compose.yml`
