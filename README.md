@@ -1,5 +1,7 @@
 # [Spug Docker Compose](https://github.com/whatwewant/spug-docker-compose)
 
+![https://hub.docker.com/repository/docker/whatwewant/spug](https://img.shields.io/docker/v/whatwewant/spug)
+
 ### Getting Started
 * Step 1
   * Copy `.env.example` to `.env`, then update environments
