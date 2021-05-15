@@ -1,4 +1,4 @@
-# Spug Docker Compose
+# [Spug Docker Compose](https://github.com/whatwewant/spug-docker-compose)
 
 # Getting Started
 * Step 1
