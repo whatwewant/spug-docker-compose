@@ -5,7 +5,7 @@
 # Git
 FROM alpine/git:v2.30.1 as git
 
-ARG VERSION=v2.3.16
+ARG VERSION=v3.0.1-beta.1
 
 WORKDIR /
 
