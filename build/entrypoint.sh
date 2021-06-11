@@ -13,7 +13,7 @@ fi
 
 # @TODO updatedb on startup
 cd /spug/spug_api
-python manage.py initdb
+python manage.py updatedb
 
 # Create Admin User
 #   Shell:
