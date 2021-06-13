@@ -11,15 +11,15 @@ if [ ! -d /run/nginx ]; then
     chown -R nginx.nginx /run/nginx
 fi
 
-# @TODO BUG, this will run every startup, 
-#   because /spug/spug_api/db.sqlite3 has never been generated.
-# init spug
-if [ ! -f /spug/spug_api/db.sqlite3 ]; then
-    cd /spug/spug_api
-    python manage.py initdb
-    # python manage.py useradd -u admin -p spug.dev -s -n 管理员
-    create_admin admin spug.dev
-fi
+# @TODO updatedb on startup
+cd /spug/spug_api
+python manage.py initdb
+
+# Create Admin User
+#   Shell:
+#     create_admin admin spug.dev
+#   Docker Compose
+#     docker-compose exec spug create_admin admin spug.dev
 
 nginx
 supervisord -c /etc/supervisord.conf

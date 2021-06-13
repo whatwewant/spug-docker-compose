@@ -12,6 +12,11 @@
   * Step 2
     * Run `docker-compose up`
 
+### Create Admin User
+* Run `docker-compose exec spug create_admin admin spug.dev`
+  * username: `admin`
+  * password: `spug.dev`
+
 ### Version Histories
 * v2.3.16
 
