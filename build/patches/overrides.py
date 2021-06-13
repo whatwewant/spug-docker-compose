@@ -1,7 +1,8 @@
 import os
 
 # Environment
-MYSQL_CONFIG = {
+DB_CONFIG = {
+  "ENGINE": os.getenv('DB_ENGINE', 'sqlite3'),
   "HOST": os.getenv('DB_HOST', '127.0.0.1'),
   "PORT": os.getenv('DB_PORT', '3306'),
   "USER": os.getenv('DB_USER', 'spug'),
@@ -24,22 +25,23 @@ ALLOWED_HOSTS = ['127.0.0.1']
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'SHOULD_BE_OVERRODE')
 
-DATABASES = {
-    'default': {
-        'ATOMIC_REQUESTS': True,
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': MYSQL_CONFIG['DATABASE'],
-        'USER': MYSQL_CONFIG['USER'],
-        'PASSWORD': MYSQL_CONFIG['PASSWORD'],
-        'HOST': MYSQL_CONFIG['HOST'],
-        'PORT': MYSQL_CONFIG['PORT'],
-        'OPTIONS': {
-            # 'unix_socket': '/var/lib/mysql/mysql.sock',
-            'charset': 'utf8mb4',
-            'sql_mode': 'STRICT_TRANS_TABLES',
+if DB_CONFIG['ENGINE'] != 'sqlite3':
+    DATABASES = {
+        'default': {
+            'ATOMIC_REQUESTS': True,
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': DB_CONFIG['DATABASE'],
+            'USER': DB_CONFIG['USER'],
+            'PASSWORD': DB_CONFIG['PASSWORD'],
+            'HOST': DB_CONFIG['HOST'],
+            'PORT': DB_CONFIG['PORT'],
+            'OPTIONS': {
+                # 'unix_socket': '/var/lib/mysql/mysql.sock',
+                'charset': 'utf8mb4',
+                'sql_mode': 'STRICT_TRANS_TABLES',
+            }
         }
     }
-}
 
 CACHES = {
     "default": {
