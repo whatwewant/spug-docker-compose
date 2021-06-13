@@ -20,6 +20,8 @@
   * Use Docker Image instead of building in `docker-compose.yml`
 * How to connect exist existing mysql/redis ?
   * Just update your `.env`
+* Can i use `sqlite3` as database ? and where is the database file ?
+  * Of course. just remove `DB_ENGINE=sqlite3`, the database file path is: `/spug/spug_api/db.sqlite3`
 
 ### License
 [MIT](./LICENSE)
