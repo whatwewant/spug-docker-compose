@@ -17,9 +17,9 @@ version: '3.4'
 services:
   spug:
     restart: always
-    build:
-      context: ./build
-    # image: whatwewant/spug:${VERSION}
+    # build:
+    #   context: ./build
+    image: whatwewant/spug:${VERSION}
     ports:
       - 8080:80
     environment:
