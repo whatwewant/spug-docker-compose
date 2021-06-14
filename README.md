@@ -10,12 +10,12 @@
   * Step 1
     * Copy `.env.example` to `.env`, then update environments
   * Step 2
-    * Run `docker-compose up`
+    * Run `docker-compose up -d`
+  * Step 3
+    * Run `docker-compose exec spug create_admin admin spug.dev`
 
-### Create Admin User
-* Run `docker-compose exec spug create_admin admin spug.dev`
-  * username: `admin`
-  * password: `spug.dev`
+### Admin user
+* admin / spug.dev
 
 ### Version Histories
 * v2.3.16

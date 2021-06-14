@@ -2,4 +2,6 @@
 
 cp .env.example .env
 
-docker-compose up
+docker-compose up -d
+
+docker-compose exec spug create_admin admin spug.dev
