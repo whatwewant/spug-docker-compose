@@ -18,7 +18,7 @@
 * admin / spug.dev
 
 ### Version Histories
-* v2.3.16
+* v3.0.1-beta.1
 
 ### FAQ
 * How to build fast
