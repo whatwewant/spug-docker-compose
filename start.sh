@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-cp .env.example .env
+if [ ! -f "$PWD/.env" ]; then
+  cp .env.example .env
+fi
 
 docker-compose up -d
 
